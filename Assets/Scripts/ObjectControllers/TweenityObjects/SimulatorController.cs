@@ -46,6 +46,7 @@ public class SimulatorController : MonoBehaviour
 
     public void OpenCheckBox()
     {
-
+        Play("allan_audio");
     }
+
 }

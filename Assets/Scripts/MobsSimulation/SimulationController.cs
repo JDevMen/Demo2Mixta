@@ -76,15 +76,15 @@ public class SimulationController : MonoBehaviour {
     //En dicho caso se selecciona el siguiente nodo
     public async void VerifyUserAction(Action actRecibida, int responseIndex=0)
     {
-        print("Se esperaba el objeto "+curExpectedUserAction.object2Action+" y se recibió "+actRecibida.object2Action);
-        print("Se esperaba la acción (método/función) "+curExpectedUserAction.actionName+" y se recibió "+actRecibida.actionName);
-        print("Se esperaban los parámetros "+curExpectedUserAction.actionParams+" y se recibieron "+actRecibida.actionParams);
+        Debug.Log("Se esperaba el objeto "+curExpectedUserAction.object2Action+" y se recibió "+actRecibida.object2Action);
+        Debug.Log("Se esperaba la acción (método/función) "+curExpectedUserAction.actionName+" y se recibió "+actRecibida.actionName);
+        Debug.Log("Se esperaban los parámetros "+curExpectedUserAction.actionParams+" y se recibieron "+actRecibida.actionParams);
 
         if(actRecibida.Equals(curExpectedUserAction) || curNode.userActions.Contains(actRecibida))
         {
             remember = false;
             ReminderController.HideReminder();
-            print("La función recibida es la esperada en el nodo actual");
+            Debug.Log("La función recibida es la esperada en el nodo actual");
 
             if(curSimulatorActions.Count>0)
             {

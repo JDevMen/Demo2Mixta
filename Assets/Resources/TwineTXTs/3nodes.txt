@@ -1,0 +1,59 @@
+﻿:: StoryTitle
+Twine
+
+:: UserScript[script]
+
+
+:: UserStylesheet[stylesheet]
+
+
+:: Recibir instrucciones y contexto[START]
+En este nodo se va a reproducir un audio indicandole el contexto de la situación en la que se encuentra el usuario, acompañado de un texto para seguir lo que se va diciendo. El audio dirá "Bienvenido al entrenador de brigadista, a lo largo de este entrenamiento vas a pasar por los distintos pasos que debe seguir un brigadista en una situación de emergencia. Este entrenador se va a concentrar en una situación de 'Bombero caído' en medio de un incendio en una habitación o espacio cerrado".
+@
+[[Mostrar lista elementos de seguridad]]
+{}
+<
+Simulator.InitializeAudiosDirectory("TweenityInstructions")
+Simulator.Wait(2)
+Simulator.Play("allan_audio")
+>
+
+:: Mostrar lista elementos de seguridad[dialogue]
+Se le muestra al usuario una lista tipo checklist con todos los elementos de seguridad que debe tomar antes de empezar con la acción de rescate.
+Por medio de un audio se le indica al usuario que debe tomar los elementos y que tiene un tiempo limitado para hacerlo.
+Implementos Casco, extintor, guantes, traje anti-incendio, gafas, máscara, botas, kit primeros auxilios, radio, linterna
+@
+[[Checkeo de implementos]]
+{}
+<
+Simulator.Play("tomarElementos")
+Simulator.OpenCheckBox()
+>
+
+:: Checkeo de implementos[multipleChoice]
+En este nodo el usuario debe revisar todos los elementos de seguridad que debe tener para poder realizar la tarea. Se debe mostrar una lista tipo "checklist" que incluya todos los elementos y vaya checkeandose los elementos a medida que se recogen o se ponen.
+En caso de que el usuario no tome todos los elementos en un tiempo determinado se debe saltar un error y pasarlo al nodo "no ha agarrado los implementos"
+Implementos: Casco, extintor, guantes, traje anti-incendio, gafas, máscara, botas, kit primeros auxilios, radio, linterna
+@
+[[ha agarrado los implementos]]
+[[no ha agarrado los implementos]]
+{
+Simulator.ElementosAgarrados()
+}
+<>
+
+
+:: ha agarrado los implementos[END]
+no pasa nada
+@
+[[]]
+{}
+<>
+
+:: no ha agarrado los implementos[END]
+no pasa nada
+@
+[[]]
+{}
+<>
+

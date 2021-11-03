@@ -355,6 +355,22 @@ PrefabInstance:
       propertyPath: m_Parameters.widthMultiplier
       value: 0.02
       objectReference: {fileID: 0}
+    - target: {fileID: 80628661472376803, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
+      propertyPath: m_PositionAction.m_Id
+      value: ef0481b9-5894-4166-86e0-798e1840582d
+      objectReference: {fileID: 0}
+    - target: {fileID: 80628661472376803, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
+      propertyPath: m_RotationAction.m_Id
+      value: 6dd5435e-0657-4a99-a551-281adb11918d
+      objectReference: {fileID: 0}
+    - target: {fileID: 80628661472376803, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
+      propertyPath: m_PositionAction.m_SingletonActionBindings.Array.data[0].m_Id
+      value: e6151e0d-2f60-4ef2-8366-513b499cddfa
+      objectReference: {fileID: 0}
+    - target: {fileID: 80628661472376803, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
+      propertyPath: m_RotationAction.m_SingletonActionBindings.Array.data[0].m_Id
+      value: 488e2bb0-ef6a-410f-a04b-37267c22f50a
+      objectReference: {fileID: 0}
     - target: {fileID: 80628662735093569, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -409,3 +425,58 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
+--- !u!1 &80628662834816888 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 80628661472376807, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
+  m_PrefabInstance: {fileID: 80628662834816887}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &80628662834816889 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 80628662828855396, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
+  m_PrefabInstance: {fileID: 80628662834816887}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &80628662834816890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80628662834816888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+--- !u!65 &80628662834816891
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80628662834816889}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}

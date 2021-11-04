@@ -3435,50 +3435,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 80628661452035380, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
-      propertyPath: m_InteractionLayerMask.m_Bits
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 80628661452035382, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
-      propertyPath: m_InvalidColorGradient.atime1
-      value: 65535
-      objectReference: {fileID: 0}
-    - target: {fileID: 80628661452035382, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
-      propertyPath: m_InvalidColorGradient.ctime0
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 80628661452035382, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
-      propertyPath: m_InvalidColorGradient.ctime1
-      value: 65535
-      objectReference: {fileID: 0}
-    - target: {fileID: 80628661452035382, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
-      propertyPath: m_InvalidColorGradient.key0.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 80628661452035382, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
-      propertyPath: m_InvalidColorGradient.key0.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 80628661452035382, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
-      propertyPath: m_InvalidColorGradient.key0.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 80628661452035382, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
-      propertyPath: m_InvalidColorGradient.key0.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 80628661452035382, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
-      propertyPath: m_InvalidColorGradient.key1.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 80628661452035382, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
-      propertyPath: m_InvalidColorGradient.key1.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 80628661452035382, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
-      propertyPath: m_InvalidColorGradient.key1.g
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 80628662735093569, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -3526,50 +3482,6 @@ PrefabInstance:
     - target: {fileID: 80628662735093571, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
       propertyPath: m_Name
       value: XR Rig
-      objectReference: {fileID: 0}
-    - target: {fileID: 80628662842562851, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
-      propertyPath: m_InteractionLayerMask.m_Bits
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 80628662842562853, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
-      propertyPath: m_InvalidColorGradient.atime1
-      value: 65535
-      objectReference: {fileID: 0}
-    - target: {fileID: 80628662842562853, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
-      propertyPath: m_InvalidColorGradient.ctime0
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 80628662842562853, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
-      propertyPath: m_InvalidColorGradient.ctime1
-      value: 65535
-      objectReference: {fileID: 0}
-    - target: {fileID: 80628662842562853, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
-      propertyPath: m_InvalidColorGradient.key0.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 80628662842562853, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
-      propertyPath: m_InvalidColorGradient.key0.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 80628662842562853, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
-      propertyPath: m_InvalidColorGradient.key0.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 80628662842562853, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
-      propertyPath: m_InvalidColorGradient.key0.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 80628662842562853, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
-      propertyPath: m_InvalidColorGradient.key1.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 80628662842562853, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
-      propertyPath: m_InvalidColorGradient.key1.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 80628662842562853, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
-      propertyPath: m_InvalidColorGradient.key1.g
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}

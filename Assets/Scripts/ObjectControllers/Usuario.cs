@@ -19,8 +19,10 @@ public class Usuario : MonoBehaviour
     {
         if (timeRemaining > 0 && isTriggering)
         {
+            Debug.Log(timeRemaining);
             timeRemaining -= Time.deltaTime;
-        } else if(timeRemaining < 0 && isTriggering)
+        }
+        else if (timeRemaining < 0 && isTriggering)
         {
             SaleDelBarrido();
         }
@@ -28,7 +30,7 @@ public class Usuario : MonoBehaviour
 
     public void SaleDelBarrido()
     {
-        Debug.Log("Entra a SaleDelBarrido");
+        Debug.Log("Entra a SaleDelBarrido asi que perdiste");
         GameObject.Find("SimulationController").GetComponent<SimulationController>().VerifyUserAction(new SimulationObject.Action(gameObject.name, "SaleDelBarrido", ""));
     }
 
@@ -48,37 +50,21 @@ public class Usuario : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("Esta onTrigger");
         GameObject obj = other.gameObject;
 
         if (obj.CompareTag("EspacioMuerto"))
         {
-            Debug.Log("Es espacio muerto");
-            //SaleDelBarrido();
-        }
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        Debug.Log("Esta onTrigger");
-        GameObject obj = other.gameObject;
-
-        if (obj.CompareTag("EspacioMuerto"))
-        {
-            Debug.Log("Es espacio muerto");
-            isTriggering = false;
+            if (isTriggering) isTriggering = false;
             timeRemaining = 10;
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Entra a collisionar");
         GameObject obj = other.gameObject;
 
         if (obj.CompareTag("EspacioMuerto"))
         {
-            Debug.Log("Es espacio muerto");
             //SaleDelBarrido();
             isTriggering = true;
         }

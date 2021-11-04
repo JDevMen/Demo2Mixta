@@ -351,26 +351,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 80628661452035381, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
-      propertyPath: m_Parameters.widthMultiplier
-      value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 80628661472376803, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
-      propertyPath: m_PositionAction.m_Id
-      value: ef0481b9-5894-4166-86e0-798e1840582d
-      objectReference: {fileID: 0}
-    - target: {fileID: 80628661472376803, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
-      propertyPath: m_RotationAction.m_Id
-      value: 6dd5435e-0657-4a99-a551-281adb11918d
-      objectReference: {fileID: 0}
-    - target: {fileID: 80628661472376803, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
-      propertyPath: m_PositionAction.m_SingletonActionBindings.Array.data[0].m_Id
-      value: e6151e0d-2f60-4ef2-8366-513b499cddfa
-      objectReference: {fileID: 0}
-    - target: {fileID: 80628661472376803, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
-      propertyPath: m_RotationAction.m_SingletonActionBindings.Array.data[0].m_Id
-      value: 488e2bb0-ef6a-410f-a04b-37267c22f50a
-      objectReference: {fileID: 0}
     - target: {fileID: 80628662735093569, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -418,10 +398,6 @@ PrefabInstance:
     - target: {fileID: 80628662735093571, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
       propertyPath: m_Name
       value: XR Rig
-      objectReference: {fileID: 0}
-    - target: {fileID: 80628662842562852, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
-      propertyPath: m_Parameters.widthMultiplier
-      value: 0.02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}

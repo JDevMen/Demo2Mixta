@@ -20,6 +20,10 @@ public class DialogueViewer : MonoBehaviour
 
     Animator anim;
 
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
     private void Start()
     {
         controller.onEnteredNode += OnNodeEnteredDV;
@@ -27,7 +31,6 @@ public class DialogueViewer : MonoBehaviour
 
         // Start the dialogue
         var curNode = controller.GetCurrentNode();
-        anim = GetComponent<Animator>();
     }
 
     public void OpenDialogue()
@@ -60,8 +63,8 @@ public class DialogueViewer : MonoBehaviour
 
         foreach (var action in controller.GetCurrentNode().simulatorActions)
         {
-            print("Executing ... "+action.actionName+" - "+action.actionParams);
-            GameObject objectF =  GameObject.Find(action.object2Action);
+            print("Executing ... " + action.actionName + " - " + action.actionParams);
+            GameObject objectF = GameObject.Find(action.object2Action);
             taskObject = await objectF.GetComponent<ObjectController>().MethodAccess(action.actionName, action.actionParams);
 
             if (controller.GetCurrentNode().tags.Contains("END"))
@@ -79,18 +82,18 @@ public class DialogueViewer : MonoBehaviour
         //Debug.Log("TEXTO "+txtNodeDisplay.text);
 
         KillAllChildren(parentOfResponses);
-        
+
         if (newNode.tags.Contains("END"))
         {
             gameObject.GetComponent<Animator>().SetTrigger("close");
             //RadioController.ColgarLlamada(false);
-            audioActivation=false;
+            audioActivation = false;
         }
         else
         {
             for (int i = newNode.responses.Count - 1; i >= 0; i--)
             {
-                if(newNode.tags.Contains("dialogue"))
+                if (newNode.tags.Contains("dialogue"))
                 {
                     int currentChoiceIndex = i;
                     var response = newNode.responses[i];

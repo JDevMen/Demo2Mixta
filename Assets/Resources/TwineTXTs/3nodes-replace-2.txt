@@ -18,7 +18,7 @@ Simulator.Wait(2)
 Simulator.Play("allan_audio")
 >
 
-:: Mostrar lista elementos de seguridad[dialogue]
+:: Mostrar lista elementos de seguridad
 Se le muestra al usuario una lista tipo checklist con todos los elementos de seguridad que debe tomar antes de empezar con la acción de rescate.
 Por medio de un audio se le indica al usuario que debe tomar los elementos y que tiene un tiempo limitado para hacerlo.
 Implementos Casco, extintor, guantes, traje anti-incendio, gafas, máscara, botas, kit primeros auxilios, radio, linterna
@@ -36,22 +36,13 @@ En caso de que el usuario no tome todos los elementos en un tiempo determinado s
 Implementos: Casco, extintor, guantes, traje anti-incendio, gafas, máscara, botas, kit primeros auxilios, radio, linterna
 @
 [[BtnAgarrar.ElementosAgarrados():ha agarrado los implementos]]
-[[BtnAgarrar.ElementosNoAgarrados():no ha agarrado los implementos]]
 {
 BtnAgarrar.ElementosAgarrados()
-BtnAgarrar.ElementosNoAgarrados()
 }
 <>
 
 
 :: BtnAgarrar.ElementosAgarrados():ha agarrado los implementos[END]
-no pasa nada
-@
-[[]]
-{}
-<>
-
-:: BtnAgarrar.ElementosNoAgarrados():no ha agarrado los implementos[END]
 no pasa nada
 @
 [[]]

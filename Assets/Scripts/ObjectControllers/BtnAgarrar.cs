@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BtnAgarrar : MonoBehaviour
 {
+    public bool pTouched = false;
 
     public void ElementosAgarrados()
     {
@@ -21,25 +22,25 @@ public class BtnAgarrar : MonoBehaviour
     /*  Puede usarse con la mano virtual, en este caso se usa un collider en el dedo �ndice, 
     /*  para detectar la colisi�n entre el bot�n y el dedo
     **/
-    // IEnumerator OnTriggerEnter(Collider other)
-    // {
-    //     if (!pTouched && other.tag == "IndexFinger")
-    //     {
-    //         pTouched = true;
-    //         ElementosAgarrados();
-    //         yield return new WaitForSeconds(0.5f);
-    //         pTouched = false;
-    //     }
-    // }
+    IEnumerator OnTriggerEnter(Collider other)
+    {
+        if (!pTouched && other.tag == "IndexFinger")
+        {
+            pTouched = true;
+            ElementosNoAgarrados();
+            yield return new WaitForSeconds(0.5f);
+            pTouched = false;
+        }
+    }
 
-    // IEnumerator OnMouseDown()
-    // {
-    //     if (!pTouched)
-    //     {
-    //         pTouched = true;
-    //         ElementosAgarrados();
-    //         yield return new WaitForSeconds(0.5f);
-    //         pTouched = false;
-    //     }
-    // }
+    IEnumerator OnMouseDown()
+    {
+        if (!pTouched)
+        {
+            pTouched = true;
+            ElementosNoAgarrados();
+            yield return new WaitForSeconds(0.5f);
+            pTouched = false;
+        }
+    }
 }

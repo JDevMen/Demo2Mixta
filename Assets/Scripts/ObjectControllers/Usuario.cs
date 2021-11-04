@@ -71,4 +71,16 @@ public class Usuario : MonoBehaviour
             //SaleDelBarrido();
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Entra a collisionar");
+        GameObject obj = other.gameObject;
+
+        if (obj.CompareTag("EspacioMuerto"))
+        {
+            Debug.Log("Es espacio muerto");
+            //SaleDelBarrido();
+        }
+    }
 }

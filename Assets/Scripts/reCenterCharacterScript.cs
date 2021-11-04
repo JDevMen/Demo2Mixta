@@ -24,7 +24,6 @@ public class reCenterCharacterScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Changing on update");
         changeCenterPos();
 
     }
@@ -36,7 +35,7 @@ public class reCenterCharacterScript : MonoBehaviour
 
         x = position.x;
 
-        z = position.y;
+        z = position.z;
 
         float y = controller.center.y;
 

@@ -26,7 +26,7 @@ public class Usuario : MonoBehaviour
     {
         Debug.Log("Entra a CabezaArriba");
         // Si la cabeza sale por más de 10 segundos el man muere
-        GameObject.Find("SimulationController").GetComponent<SimulationController>().VerifyUserAction(new SimulationObject.Action(gameObject.name, "CabezaArriba", ""));
+        // GameObject.Find("SimulationController").GetComponent<SimulationController>().VerifyUserAction(new SimulationObject.Action(gameObject.name, "CabezaArriba", ""));
     }
 
     public void EncontrarSalida()
@@ -34,5 +34,15 @@ public class Usuario : MonoBehaviour
         Debug.Log("Entra a EncontrarSalida");
         // Si la cabeza sale por más de 10 segundos el man muere
         GameObject.Find("SimulationController").GetComponent<SimulationController>().VerifyUserAction(new SimulationObject.Action(gameObject.name, "EncontrarSalida", ""));
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        GameObject EspacioMuerto = collision.gameObject;
+
+        if(EspacioMuerto.CompareTag("EspacioMuerto"))
+        {
+            SaleDelBarrido();
+        }
     }
 }

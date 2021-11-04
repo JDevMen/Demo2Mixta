@@ -1,21 +1,28 @@
-using System;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class BtnAgarrar : MonoBehaviour
+public class BtnDerecha : MonoBehaviour
 {
+    // Start is called before the first frame update
+    void Start()
+    {
 
-    public void ElementosAgarrados()
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+    public void Touched()
     {
         Debug.Log("Entra");
-        GameObject.Find("SimulationController").GetComponent<SimulationController>().VerifyUserAction(new SimulationObject.Action(gameObject.name, "ElementosAgarrados", ""));
+        GameObject.Find("SimulationController").GetComponent<SimulationController>().VerifyUserAction(new SimulationObject.Action(gameObject.name, "Touched", ""));
         gameObject.SetActive(false);
     }
 
-    public void ElementosNoAgarrados()
-    {
-        GameObject.Find("SimulationController").GetComponent<SimulationController>().VerifyUserAction(new SimulationObject.Action(gameObject.name, "ElementosNoAgarrados", ""));
-    }
 
     /** Este m�todo sirve para detectar que se oprime el bot�n en VR
     /*  Puede usarse con la mano virtual, en este caso se usa un collider en el dedo �ndice, 

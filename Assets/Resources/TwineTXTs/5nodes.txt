@@ -35,25 +35,42 @@ En este nodo el usuario debe revisar todos los elementos de seguridad que debe t
 En caso de que el usuario no tome todos los elementos en un tiempo determinado se debe saltar un error y pasarlo al nodo "no ha agarrado los implementos"
 Implementos: Casco, extintor, guantes, traje anti-incendio, gafas, máscara, botas, kit primeros auxilios, radio, linterna
 @
-[[ha agarrado los implementos]]
-[[no ha agarrado los implementos]]
+[[BtnAgarrar.ElementosAgarrados():ha agarrado los implementos]]
 {
 BtnAgarrar.ElementosAgarrados()
 }
 <>
 
 
-:: ha agarrado los implementos[END]
+:: BtnAgarrar.ElementosAgarrados():ha agarrado los implementos[multipleChoice]
+En este nodo se inicia el proceso de barrido por método general. El usuario debe elegir si hace el barrido empezando por la izquierda o por la derecha.
+@
+[[BtnIzquierda.Touched():barrido izquierda]]
+[[BtnDerecha.Touched():barrido derecha]]
+{
+BtnIzquierda.Touched()
+BtnDerecha.Touched()
+}
+<>
+
+:: END[END]
 no pasa nada
 @
 [[]]
 {}
 <>
 
-:: no ha agarrado los implementos[END]
+:: BtnIzquierda.Touched():barrido izquierda
 no pasa nada
 @
-[[]]
+[[END]]
+{}
+<>
+
+:: BtnDerecha.Touched():barrido derecha
+no pasa nada
+@
+[[END]]
 {}
 <>
 

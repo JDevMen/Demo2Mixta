@@ -4,16 +4,26 @@ using UnityEngine;
 
 public class Usuario : MonoBehaviour
 {
+
+    private float timeRemaining = 10;
+    private bool isTriggering = false;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (timeRemaining > 0 && isTriggering)
+        {
+            timeRemaining -= Time.deltaTime;
+        } else if(timeRemaining < 0 && isTriggering)
+        {
+            SaleDelBarrido();
+        }
     }
 
     public void SaleDelBarrido()
@@ -36,39 +46,28 @@ public class Usuario : MonoBehaviour
         GameObject.Find("SimulationController").GetComponent<SimulationController>().VerifyUserAction(new SimulationObject.Action(gameObject.name, "EncontrarSalida", ""));
     }
 
-    private void OnCollisionStay(Collision collision)
+    private void OnTriggerExit(Collider other)
     {
-        Debug.Log("Está collisionando");
-        GameObject EspacioMuerto = collision.gameObject;
+        Debug.Log("Esta onTrigger");
+        GameObject obj = other.gameObject;
 
-        if (EspacioMuerto.CompareTag("EspacioMuerto"))
+        if (obj.CompareTag("EspacioMuerto"))
         {
             Debug.Log("Es espacio muerto");
             //SaleDelBarrido();
         }
     }
 
-    private void OnCollisionExit(Collision collision)
+    private void OnTriggerStay(Collider other)
     {
-        Debug.Log("Sale de colisionar");
-        GameObject EspacioMuerto = collision.gameObject;
+        Debug.Log("Esta onTrigger");
+        GameObject obj = other.gameObject;
 
-        if (EspacioMuerto.CompareTag("EspacioMuerto"))
+        if (obj.CompareTag("EspacioMuerto"))
         {
             Debug.Log("Es espacio muerto");
-            //SaleDelBarrido();
-        }
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("Entra a collisionar");
-        GameObject EspacioMuerto = collision.gameObject;
-
-        if(EspacioMuerto.CompareTag("EspacioMuerto"))
-        {
-            Debug.Log("Es espacio muerto");
-            //SaleDelBarrido();
+            isTriggering = false;
+            timeRemaining = 10;
         }
     }
 
@@ -81,6 +80,7 @@ public class Usuario : MonoBehaviour
         {
             Debug.Log("Es espacio muerto");
             //SaleDelBarrido();
+            isTriggering = true;
         }
     }
 }

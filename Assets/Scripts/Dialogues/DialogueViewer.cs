@@ -24,6 +24,7 @@ public class DialogueViewer : MonoBehaviour
     {
         anim = GetComponent<Animator>();
     }
+
     private void Start()
     {
         controller.onEnteredNode += OnNodeEnteredDV;

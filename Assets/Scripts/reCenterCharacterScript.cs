@@ -24,7 +24,14 @@ public class reCenterCharacterScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        Debug.Log("Changing on update");
+        changeCenterPos();
+
+    }
+
+    private void changeCenterPos()
+    {
+
         Vector3 position = camara.transform.position;
 
         x = position.x;
@@ -36,6 +43,5 @@ public class reCenterCharacterScript : MonoBehaviour
         Vector3 newPos = new Vector3(x, y, z);
 
         controller.center = newPos;
-
     }
 }

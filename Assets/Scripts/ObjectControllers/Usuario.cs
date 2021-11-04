@@ -38,10 +38,12 @@ public class Usuario : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("Entra a collisionar");
         GameObject EspacioMuerto = collision.gameObject;
 
         if(EspacioMuerto.CompareTag("EspacioMuerto"))
         {
+            Debug.Log("Es espacio muerto");
             SaleDelBarrido();
         }
     }

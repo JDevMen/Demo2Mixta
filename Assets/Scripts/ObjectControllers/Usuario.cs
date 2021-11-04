@@ -7,7 +7,7 @@ public class Usuario : MonoBehaviour
 
     private float timeRemaining = 10;
     private bool isTriggering = false;
-
+    private float offset = 0.2f;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +26,7 @@ public class Usuario : MonoBehaviour
         {
             SaleDelBarrido();
         }
+        EncontrarSalida();
     }
 
     public void SaleDelBarrido()
@@ -44,8 +45,13 @@ public class Usuario : MonoBehaviour
     public void EncontrarSalida()
     {
         Debug.Log("Entra a EncontrarSalida");
-        // Si la cabeza sale por más de 10 segundos el man muere
-        GameObject.Find("SimulationController").GetComponent<SimulationController>().VerifyUserAction(new SimulationObject.Action(gameObject.name, "EncontrarSalida", ""));
+        Vector3 vectorCamera = GameObject.Find("Main Camera").transform.position;
+        Vector3 vectorSalidaIzquierda = GameObject.Find("BtnSalidaIzquierda").transform.position;
+        if (vectorCamera.x + offset == vectorSalidaIzquierda.x && vectorCamera.z + offset == vectorSalidaIzquierda.z)
+        {
+            GameObject.Find("SimulationController").GetComponent<SimulationController>().VerifyUserAction(new SimulationObject.Action(gameObject.name, "EncontrarSalida", ""));
+        }
+
     }
 
     private void OnTriggerExit(Collider other)

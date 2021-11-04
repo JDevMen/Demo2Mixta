@@ -36,6 +36,30 @@ public class Usuario : MonoBehaviour
         GameObject.Find("SimulationController").GetComponent<SimulationController>().VerifyUserAction(new SimulationObject.Action(gameObject.name, "EncontrarSalida", ""));
     }
 
+    private void OnCollisionStay(Collision collision)
+    {
+        Debug.Log("Está collisionando");
+        GameObject EspacioMuerto = collision.gameObject;
+
+        if (EspacioMuerto.CompareTag("EspacioMuerto"))
+        {
+            Debug.Log("Es espacio muerto");
+            //SaleDelBarrido();
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        Debug.Log("Sale de colisionar");
+        GameObject EspacioMuerto = collision.gameObject;
+
+        if (EspacioMuerto.CompareTag("EspacioMuerto"))
+        {
+            Debug.Log("Es espacio muerto");
+            //SaleDelBarrido();
+        }
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("Entra a collisionar");
@@ -44,7 +68,7 @@ public class Usuario : MonoBehaviour
         if(EspacioMuerto.CompareTag("EspacioMuerto"))
         {
             Debug.Log("Es espacio muerto");
-            SaleDelBarrido();
+            //SaleDelBarrido();
         }
     }
 }

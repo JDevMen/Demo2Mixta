@@ -1,0 +1,27 @@
+﻿:: StoryTitle
+Twine
+
+:: UserScript[script]
+
+
+:: UserStylesheet[stylesheet]
+
+
+:: Recibir instrucciones y contexto[START]
+En este nodo se va a reproducir un audio indicandole el contexto de la situación en la que se encuentra el usuario, acompañado de un texto para seguir lo que se va diciendo. El audio dirá "Bienvenido al entrenador de brigadista, a lo largo de este entrenamiento vas a pasar por los distintos pasos que debe seguir un brigadista en una situación de emergencia. Este entrenador se va a concentrar en una situación de 'Bombero caído' en medio de un incendio en una habitación o espacio cerrado".
+@
+[[Mostrar lista elementos de seguridad]]
+{}
+<
+Simulator.InitializeAudiosDirectory("TweenityInstructions")
+Simulator.Wait(2)
+Simulator.Play("allan_audio")
+>
+
+:: Mostrar lista elementos de seguridad[END]
+Algunos comentarios
+@
+[[X]]
+{}
+<>
+

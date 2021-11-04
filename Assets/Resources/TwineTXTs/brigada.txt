@@ -1,0 +1,192 @@
+﻿:: StoryTitle
+Entrenador Brigada
+
+:: UserScript[script]
+
+
+:: UserStylesheet[stylesheet]
+
+
+:: Recibir instrucciones y contexto[START]
+En este nodo se va a reproducir un audio indicandole el contexto de la situación en la que se encuentra el usuario, acompañado de un texto para seguir lo que se va diciendo. El audio dirá "Bienvenido al entrenador de brigadista, a lo largo de este entrenamiento vas a pasar por los distintos pasos que debe seguir un brigadista en una situación de emergencia. Este entrenador se va a concentrar en una situación de 'Bombero caído' en medio de un incendio en una habitación o espacio cerrado.
+INCENDIO
+@
+[[mostrar lista elementos de seguridad]]
+{}
+<Simulador.play("audioExplicativo")>
+
+:: Checkeo de implementos[timeOut]
+En este nodo el usuario debe revisar todos los elementos de seguridad que debe tener para poder realizar la tarea. Se debe mostrar una lista tipo "checklist" que incluya todos los elementos y vaya checkeandose los elementos a medida que se recogen o se ponen.
+En caso de que el usuario no tome todos los elementos en un tiempo determinado se debe saltar un error y pasarlo al nodo "no ha agarrado los implementos"
+Implementos: [Casco, extintor, guantes, traje anti-incendio, gafas, máscara, botas, kit primeros auxilios, radio, linterna]
+@
+[[ha agarrado los implementos]]
+[[no ha agarrado los implementos]]
+{
+Simulator.timeOut(300)
+implementosSeguridadChecker.elementosAgarrados()
+}
+<>
+
+
+:: ha agarrado los implementos[dialogue]
+Una vez el usuario tiene todos los elementos de seguridad necesarios para el rescate entonces es transportado al lugar del rescate. En este nodo se debe elegir cuál método para barrer la habitación se va a utilizar.
+@
+[[metodo general]]
+{}
+<>
+
+:: no ha agarrado los implementos
+Se manda un aviso de que el usuario no ha agarrado todos los elementos de seguridad y por lo tanto podría estar en peligro al realizar el rescate. 
+@
+[[Checkeo de implementos]]
+{}
+<Simulador.showDialog("No puedes entrar al rescate sin todos los implementos necesarios")>
+
+:: metodo general[multipleChoice]
+En este nodo se inicia el proceso de barrido por método general. El usuario debe elegir si hace el barrido empezando por la izquierda o por la derecha.
+@
+[[floatingButton.touch("izquierda"):barrido izquierda]]
+[[floatingButton.touch("derecha"):barrido derecha]]
+{
+floatingButton.touch("izquierda")
+floatingButton.touch("derecha")
+}
+<
+Simulador.showCheckBox("Izquierda"; "Derecha")
+>
+
+:: floatingButton.touch("izquierda"):barrido izquierda[MultipleChoice]
+Después de que el usuario decide entrar a la habitación y recorrerla por la izquierda debe mantener su cabeza agachada para evitar el humo. De no hacerlo esto podría ponerlo en peligro y afectar el rescate.
+Además, la persona no puede cambiar de opinión en el recorrido porque podría afectar el correcto procedimiento de rescate.
+El usuario debe acercarse al bombero caido para rescatarlo.
+@
+[[Action.standUp():levantar cabeza]]
+[[Action.changeDirection():cambiar de dirección]]
+[[Action.findPerson():encuentra al bombero caido]]
+{
+Action.standUp()
+Action.changeDirection()
+Action.findPerson()
+}
+<
+Simulador.showDecisionArrow()
+>
+
+:: floatingButton.touch("derecha"):barrido derecha[MultipleChoice]
+Después de que el usuario decide entrar a la habitación y recorrerla por la derecha debe mantener su cabeza agachada para evitar el humo. De no hacerlo esto podría ponerlo en peligro y afectar el rescate.
+Además, la persona no puede cambiar de opinión en el recorrido porque podría afectar el correcto procedimiento de rescate.
+El usuario debe acercarse al bombero caido para rescatarlo.
+@
+[[Action.standUp():levantar cabeza]]
+[[Action.changeDirection():cambiar de dirección]]
+[[Action.findPerson():encuentra al bombero caido]]
+{
+Action.standUp()
+Action.changeDirection()
+Action.findPerson()
+}
+<
+Simulador.showDecisionArrow()
+>
+
+:: Action.standUp():levantar cabeza[reminder]
+El usuario no debe subir la cabeza demasiado porque podría afectar su visibilidad y además aspirar monoxido de carbono al fallar los implementos por sobre exposición. En caso de que el usuario haga caso omiso entonces se fallará la misión, será retirado y sancionado.
+Si después de 10 segundos el usuario no ha bajado la cabeza se reproduce un audio que dice "Baja la cabeza o te puedes desmayar por intoxicación por monóxido de carbono"
+@
+[[floatingButton.touch("izquierda"):barrido izquierda]]
+[[floatingButton.touch("derecha"):barrido derecha]]
+[[head.noBajoCabeza():Misión fallida por levantar la cabeza]]
+{
+Simulator.showReminder(10; head ; audioBajaCabeza)
+head.noBajoCabeza()
+}
+<>
+
+
+:: Action.changeDirection():cambiar de dirección[reminder multipleChoice]
+El usuario al cambiar de dirección en mitad del rescate pone en riesgo a los demás brigadistas, por lo tanto se le da un aviso de que no debe hacerlo o sino será sacado de la misión de rescate y sancionado.
+Se le recordará al usuario que debe mantener la dirección con la que empezó el recorrido reproduciendo un audio que diga: "Si cambias de dirección en mitad del rescate puedes poner en riesgo a tus compañeros."
+@
+[[floatingButton.touch("izquierda"):barrido izquierda]]
+[[floatingButton.touch("derecha"):barrido derecha]]
+[[ground.changedDirection():Misión fallida por cambio de dirección]]
+{}
+<
+Simulator.showReminder(5; directionArrow, audioCambioDireccion)
+ground.keptDirection()
+ground.changedDirection()
+>
+
+:: ground.changedDirection():Misión fallida por cambio de dirección[END]
+En caso de que la persona trate de cambiar de dirección la misión se cuenta como fallida y termina en error
+
+
+:: head.noBajoCabeza():Misión fallida por levantar la cabeza[END]
+Se le indica al usuario que ha fallado la misión por no seguir la instrucción de mantenerse agachado, exponiendose a intoxicación por monóxido de carbono.
+@
+<>
+{
+Simulador.showEndStandUp()
+}
+
+
+:: Action.findPerson():encuentra al bombero caido[Random]
+El usuario debe gritar "pacienteeeee" una vez encontrado al bombero caído. En caso de que el bombero caído no responda entonces los demás bomberos deben sacarlo de inmediato y se pasa a realizar primeros auxilios. De lo contrario entonces se procede al proceso de rescate cuando el paciente responde.
+@
+[[paciente no responde]]
+[[paciente responde]]
+{
+Action.yell("Pacientee")
+}
+<>
+
+:: paciente no responde
+El usuario es transportado fuera de la habitación y pasa a realizar los primeros auxilios.
+@
+[[primero auxilios]]
+{
+}
+<
+Simulator.showDialog("Si el paciente no responde debes sacarlo lo más pronto posible de la escena e ir haciendo primeros auxilios a la vez.")
+>
+
+:: paciente responde
+Se estabiliza al bombero y se espera a que los demás brigadistas aseguren una ruta de salida.
+@
+[[fin del entrenamiento]]
+{}
+<
+Simulator.showDialog("Si el paciente sí responde debes hacer primeros auxilios en el lugar y esperar a un compañero para sacarlo de la escena")
+>
+
+:: primero auxilios
+El usuario realiza los primeros auxilios para estabilizar al bombero caído, llama a la ambulancia y se termina el entrenamiento.
+@
+[[fin del entrenamiento]]
+{
+Action.rcp()
+ButtonAmbulance.call()
+}
+<>
+
+:: fin del entrenamiento[END]
+Se termina el entrenamiento y se le dice al usuario el tiempo que tomó en realizarlo.
+@
+<>
+{
+Simulador.showEndTraining();
+}
+
+:: mostrar lista elementos de seguridad
+Se le muestra al usuario una lista tipo checklist con todos los elementos de seguridad que debe tomar antes de empezar con la acción de rescate.
+Por medio de un audio se le indica al usuario que debe tomar los elementos y que tiene un tiempo limitado para hacerlo.
+Implementos: [Casco, extintor, guantes, traje anti-incendio, gafas, máscara, botas, kit primeros auxilios, radio, linterna]
+@
+[[Checkeo de implementos]]
+{}
+<
+Simulator.Play("tomarElementos")
+implementosSeguridadChecker.showCheckBox()
+>
+

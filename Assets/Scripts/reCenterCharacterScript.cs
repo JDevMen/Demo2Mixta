@@ -31,7 +31,7 @@ public class reCenterCharacterScript : MonoBehaviour
     private void changeCenterPos()
     {
 
-        Vector3 position = camara.transform.position;
+        Vector3 position = camara.transform.localPosition;
 
         x = position.x;
 

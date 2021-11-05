@@ -137,6 +137,12 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
+## Twine
+
+* El .txt final se puede ver en: https://github.com/JDevMen/Demo2Mixta/blob/main/Assets/Resources/TwineTXTs/13nodes.txt
+* El Html final se puede ver en: https://github.com/JDevMen/Demo2Mixta/blob/main/Assets/Resources/TwineTXTs/13nodes.html
+
+
 
 <!-- ROADMAP -->
 ## Roadmap

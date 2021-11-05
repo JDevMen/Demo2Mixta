@@ -26,7 +26,7 @@ public class Usuario : MonoBehaviour
         {
             SaleDelBarrido();
         }
-        //EncontrarSalida();
+        EncontrarSalida();
     }
 
     public void SaleDelBarrido()
@@ -45,12 +45,14 @@ public class Usuario : MonoBehaviour
     public void EncontrarSalida()
     {
         Debug.Log("Entra a EncontrarSalida");
-        //Vector3 vectorCamera = GameObject.Find("Main Camera").transform.position;
-        //Vector3 vectorSalidaIzquierda = GameObject.Find("BtnSalidaIzquierda").transform.position;
-        //if (vectorCamera.x + offset == vectorSalidaIzquierda.x && vectorCamera.z + offset == vectorSalidaIzquierda.z)
-        //{
+        Vector3 vectorCamera = GameObject.Find("Main Camera").transform.position;
+        Vector3 vectorSalidaIzquierda = GameObject.Find("BtnSalidaIzquierda").transform.position;
+        Debug.Log("VectorCamera" + vectorCamera.x + "," + vectorCamera.z);
+        if (vectorCamera.x + offset == vectorSalidaIzquierda.x && vectorCamera.z + offset == vectorSalidaIzquierda.z)
+        {
+            Debug.Log("VectorSalida" + vectorSalidaIzquierda.x + "," + vectorSalidaIzquierda.z);
             GameObject.Find("SimulationController").GetComponent<SimulationController>().VerifyUserAction(new SimulationObject.Action(gameObject.name, "EncontrarSalida", ""));
-        //}
+        }
 
     }
 

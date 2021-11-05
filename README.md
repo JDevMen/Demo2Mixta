@@ -82,7 +82,11 @@
 A continuación, se muestran algunas capturas del proyecto y el proceso de desarrollo.
 
 
+ ![image](https://user-images.githubusercontent.com/47110686/140454973-b1c7e6d5-f593-44b9-8c8f-f2ad8fbee495.png)
 
+![image](https://user-images.githubusercontent.com/47110686/140455106-92ebd036-3800-4523-81dd-476ce8daafa4.png)
+
+![image](https://user-images.githubusercontent.com/47110686/140455159-83d70615-09bb-4f05-a3cf-ba389d9afc1e.png)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -122,7 +126,7 @@ En estos pasos supondremos que ya se cuenta con los prerrequisitos anteriormente
 
 ### Correr el proyecto desde el APK
 
-El proyecto se puede descargar como una aplicación Standalone para Windows en el siguiente link (**PONER LINK APK**).
+El proyecto se puede descargar como una aplicación Standalone para Windows en el siguiente link: https://uniandes-my.sharepoint.com/:u:/r/personal/jd_mendozar_uniandes_edu_co/Documents/mixta/build.zip?csf=1&web=1&e=T6H1v2.
 Luego de descargarla solo basta darle click para correrlo.
 
 <p align="right">(<a href="#top">back to top</a>)</p>

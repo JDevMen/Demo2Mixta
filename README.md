@@ -145,6 +145,11 @@ https://youtube.com/shorts/h-72JUCimhY?feature=share
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+## Twine
+
+* El .txt final se puede ver en: https://github.com/JDevMen/Demo2Mixta/blob/main/Assets/Resources/TwineTXTs/13nodes.txt
+* El Html final se puede ver en: https://github.com/JDevMen/Demo2Mixta/blob/main/Assets/Resources/TwineTXTs/13nodes.html
+
 
 
 <!-- ROADMAP -->

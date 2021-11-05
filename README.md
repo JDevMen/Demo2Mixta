@@ -126,7 +126,7 @@ En estos pasos supondremos que ya se cuenta con los prerrequisitos anteriormente
 
 ### Correr el proyecto desde el APK
 
-El proyecto se puede descargar como una aplicación Standalone para Windows en el siguiente link: https://uniandes-my.sharepoint.com/:u:/r/personal/jd_mendozar_uniandes_edu_co/Documents/mixta/build.zip?csf=1&web=1&e=T6H1v2.
+El proyecto se puede descargar como una aplicación Standalone para Windows en el siguiente link: https://uniandes-my.sharepoint.com/:u:/g/personal/jd_mendozar_uniandes_edu_co/EYkQgmLJyYxBnXu1Sp_z50EBhfo1bd-73M2cAI8d6CN0xA?e=X1x0bX
 Luego de descargarla solo basta darle click para correrlo.
 
 <p align="right">(<a href="#top">back to top</a>)</p>

@@ -7,7 +7,18 @@ public class Usuario : MonoBehaviour
 
     private float timeRemaining = 10;
     private bool isTriggering = false;
-    private float offset = 0.2f;
+    private float offset = 1f;
+
+    public void endCoords()
+    {
+        Vector3 vectorCamera = GameObject.Find("Main Camera").transform.position;
+        Vector3 vectorCameraAdj = new Vector3(vectorCamera.x, 0, vectorCamera.z);
+
+        Vector3 vectorSalidaIzquierda = GameObject.Find("BtnSalidaIzquierda").transform.position;
+        Vector3 vectorSalidaIzquierdaAdj = new Vector3(vectorSalidaIzquierda.x, 0, vectorSalidaIzquierda.z);
+        Debug.Log("Distancia: " + Vector3.Distance(vectorSalidaIzquierdaAdj, vectorCameraAdj));
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,13 +55,14 @@ public class Usuario : MonoBehaviour
 
     public void EncontrarSalida()
     {
-        Debug.Log("Entra a EncontrarSalida");
         Vector3 vectorCamera = GameObject.Find("Main Camera").transform.position;
+        Vector3 vectorCameraAdj = new Vector3(vectorCamera.x, 0, vectorCamera.z);
+
         Vector3 vectorSalidaIzquierda = GameObject.Find("BtnSalidaIzquierda").transform.position;
-        Debug.Log("VectorCamera" + vectorCamera.x + "," + vectorCamera.z);
-        if (vectorCamera.x + offset == vectorSalidaIzquierda.x && vectorCamera.z + offset == vectorSalidaIzquierda.z)
+        Vector3 vectorSalidaIzquierdaAdj = new Vector3(vectorSalidaIzquierda.x, 0, vectorSalidaIzquierda.z);
+        if (Vector3.Distance(vectorCameraAdj, vectorSalidaIzquierdaAdj) <= offset)
         {
-            Debug.Log("VectorSalida" + vectorSalidaIzquierda.x + "," + vectorSalidaIzquierda.z);
+            Debug.Log("Ganamos!");
             GameObject.Find("SimulationController").GetComponent<SimulationController>().VerifyUserAction(new SimulationObject.Action(gameObject.name, "EncontrarSalida", ""));
         }
 

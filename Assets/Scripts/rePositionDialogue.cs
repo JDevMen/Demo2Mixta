@@ -8,6 +8,8 @@ public class rePositionDialogue : MonoBehaviour
 
     private Transform transf;
 
+    public float distance_head = 3f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +20,8 @@ public class rePositionDialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transf.position = playerHead.transform.position;   
+        Vector3 offsetDialog = (transf.position + Vector3.Normalize(playerHead.transform.rotation.eulerAngles))*distance_head;
+
+        transf.position = offsetDialog;
     }
 }

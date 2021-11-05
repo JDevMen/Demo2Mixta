@@ -22,16 +22,14 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+
 
 
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-    <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://user-images.githubusercontent.com/47110686/140453313-3f016317-f7cb-45e8-9a54-09a9ae626b0a.png" alt="Logo" width="450" height="300">
-  </a>
+
 
 <h3 align="center">Entrenador de Brigadistas</h3>
 
@@ -139,12 +137,6 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-## Twine
-
-* El .txt final se puede ver en: https://github.com/JDevMen/Demo2Mixta/blob/main/Assets/Resources/TwineTXTs/13nodes.txt
-* El Html final se puede ver en: https://github.com/JDevMen/Demo2Mixta/blob/main/Assets/Resources/TwineTXTs/13nodes.html
-
-
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -184,16 +176,14 @@ Project Link: [https://github.com/JDevMen/Demo2Mixta](https://github.com/JDevMen
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[contributors-shield]: https://img.shields.io/github/contributors/JDevMen/Demo2Mixta.svg?style=for-the-badge
+[contributors-url]: https://github.com/JDevMen/Demo2Mixta/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/JDevMen/Demo2Mixta.svg?style=for-the-badge
+[forks-url]: https://github.com/JDevMen/Demo2Mixta/network/members
+[stars-shield]: https://img.shields.io/github/stars/JDevMen/Demo2Mixta.svg?style=for-the-badge
+[stars-url]: https://github.com/JDevMen/Demo2Mixta/stargazers
+[issues-shield]: https://img.shields.io/github/issues/JDevMen/Demo2Mixta.svg?style=for-the-badge
+[issues-url]: https://github.com/JDevMen/Demo2Mixta/issues
+[license-shield]: https://img.shields.io/github/license/JDevMen/Demo2Mixta.svg?style=for-the-badge
+[license-url]: https://github.com/JDevMen/Demo2Mixta/blob/master/LICENSE.txt
 [product-screenshot]: images/screenshot.png

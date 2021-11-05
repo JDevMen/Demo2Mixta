@@ -5015,7 +5015,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!43 &1211573439
 Mesh:
@@ -5023,7 +5023,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh60704
+  m_Name: pb_Mesh39816
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5699,74 +5699,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1381958134}
   m_CullTransparentMesh: 1
---- !u!1 &1573421588
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1573421591}
-  - component: {fileID: 1573421590}
-  - component: {fileID: 1573421589}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1573421589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1573421588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab68ce6587aab0146b8dabefbd806791, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ClickSpeed: 0.3
-  m_MoveDeadzone: 0.6
-  m_RepeatDelay: 0.5
-  m_RepeatRate: 0.1
-  m_TrackedDeviceDragThresholdMultiplier: 2
-  m_MaxTrackedDeviceRaycastDistance: 1000
-  m_EnableXRInput: 1
-  m_EnableMouseInput: 1
-  m_EnableTouchInput: 1
---- !u!114 &1573421590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1573421588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
---- !u!4 &1573421591
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1573421588}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1631426698
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5932,7 +5864,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6464524752979362536, guid: 684795c26c412b94091b0011780cd42b, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6464524752979362536, guid: 684795c26c412b94091b0011780cd42b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6066,6 +5998,23 @@ MonoBehaviour:
   m_EnableXRInput: 1
   m_EnableMouseInput: 1
   m_EnableTouchInput: 1
+--- !u!1 &1757515918 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5188572170040349964, guid: 684795c26c412b94091b0011780cd42b, type: 3}
+  m_PrefabInstance: {fileID: 1757515914}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1757515919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757515918}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eac05ac8ed0316643a861d635ac6937a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1807509674
 GameObject:
   m_ObjectHideFlags: 0
@@ -6250,8 +6199,7 @@ VFXRenderer:
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
+  m_Materials: []
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6330,7 +6278,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh60592
+  m_Name: pb_Mesh39612
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6497,7 +6445,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 80628662735093569, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 80628662735093569, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6505,7 +6453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 80628662735093569, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.25
+      value: 2.25
       objectReference: {fileID: 0}
     - target: {fileID: 80628662735093569, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6542,6 +6490,10 @@ PrefabInstance:
     - target: {fileID: 80628662735093571, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
       propertyPath: m_Name
       value: Usuario
+      objectReference: {fileID: 0}
+    - target: {fileID: 80628662735093571, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 750504c9ddd1fd44bbe9e33343a57d36, type: 3}
@@ -8686,7 +8638,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1999055807}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9, y: 2, z: 2}
+  m_LocalPosition: {x: -9, y: 1.93, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9093,7 +9045,7 @@ RectTransform:
   m_Children:
   - {fileID: 38339670}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

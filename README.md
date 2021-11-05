@@ -29,6 +29,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
+    <img src="https://user-images.githubusercontent.com/47110686/140454597-58fa49cf-744a-4d96-ba6e-54e0387bc073.png" alt="Logo" width="450" height="300">
+  </a>
 
 
 <h3 align="center">Entrenador de Brigadistas</h3>

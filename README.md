@@ -29,7 +29,9 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-
+    <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="https://user-images.githubusercontent.com/47110686/140453313-3f016317-f7cb-45e8-9a54-09a9ae626b0a.png" alt="Logo" width="450" height="300">
+  </a>
 
 <h3 align="center">Entrenador de Brigadistas</h3>
 

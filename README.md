@@ -79,8 +79,9 @@
 
 <!-- ABOUT THE PROJECT -->
 ## Sobre el proyecto
+A continuación, se muestran algunas capturas del proyecto y el proceso de desarrollo.
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+
 
 
 
@@ -130,9 +131,11 @@ Luego de descargarla solo basta darle click para correrlo.
 
 <!-- USAGE EXAMPLES -->
 ## Demo de Uso ruta 1 (Video)
+https://youtu.be/AHL1C4z25is
 
 
 ## Demo uso ruta 2 (Video)
+https://youtube.com/shorts/h-72JUCimhY?feature=share
 
 
 

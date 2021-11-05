@@ -68,5 +68,6 @@ public class Usuario : MonoBehaviour
             //SaleDelBarrido();
             isTriggering = true;
         }
+
     }
 }
